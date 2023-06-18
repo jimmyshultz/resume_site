@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Jimmy Shultz - Resume</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'resume_app/assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'resume_app/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Jimmy Shultz</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'resume_app/assets/img/headshot.jpg' %}" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'blog:blog' %}">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Jimmy
+                        <span class="text-primary">Shultz</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Goodlettsville, TN 37072 · (913) 952-6078 ·
+                        <a href="mailto:jimmyshultz3@gmail.com">jimmyshultz3@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">I am experienced in technology sales, customer service, and communication and am growing my technical skills on numerous fronts.  While I'm currently proficient in creating Django web applications using Python, Bootstrap, HTML & CSS, I'm also anxious to apply my fundamental knowledge of programming to more and more technologies over time.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/jimmy-shultz/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/jimmyshultz"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/jlshultz2/"><i class="fab fa-instagram"></i></a>
+                        <a class="social-icon" href="https://www.facebook.com/jimmy.shultz3/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Business Development Representative</h3>
+                            <div class="subheading mb-3">Google Cloud via Concentrix</div>
+                            <ul>
+                                <li>Delivered effective outreach to prospective customers at a weekly rate of ~300% above average pacing for the team.</li>
+                                <li>Booked meetings at an above average weekly rate.</li>
+                                <li>Created opportunities to be closed by account executives at a rate consistently above quota - 136%, 127%, & 120% of a rising quota in the three most recent quarters.</li>
+                                <li>Maintained excellent CRM hygiene.</li>
+                                <li>Won both Amplifier of the Week and Google Cloud Rep of the Quarter for overall success, tenacity, and collaboration.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Outfitter & Team Lead</h3>
+                            <div class="subheading mb-3">Fleet Feet</div>
+                            <ul>
+                                <li>Educated customers on athletic footwear options and needs.</li>
+                                <li>Provided thorough, effective, and efficient customer service.</li>
+                                <li>Sold merchandise to meet customer's needs.</li>  
+                                <li>Operated the cash register.</li>
+                                <li>Provided leadership to the weekend outfitter team.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2022 - July 2022, February 2020 - June 2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Youth Pastor</h3>
+                            <div class="subheading mb-3">Goodlettsville Church of the Nazarene</div>
+                            <ul>
+                                <li>Provided public speaking, event planning, administration, and weekly education for the GoodNaz youth group and their families.</li>
+                                <li>Managed a team of 10+ volunteers.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2021 - March 2022</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Merrimack College</h3>
+                            <div class="subheading mb-3">Master of Computer Science</div>
+                            <div>Software Engineering</div>
+                            <p>GPA: 4.00</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">May 2023 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Trevecca Nazarene University</h3>
+                            <div class="subheading mb-3">Bachelor of Arts</div>
+                            <p>GPA: 3.90</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2017 - November 2020</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Turner High School</h3>
+                            <div class="subheading mb-3">Valedictorian</div>
+                            <p>GPA: 4.00</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2013 - May 2017</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2022 Q4 Google Cloud Rep of the Quarter - Concentrix
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2022 Amplifier of the Week - Concentrix
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2021 Male Scholar Athlete of the Year - Trevecca Atheltic Department
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2021 Phi Delta Lamba Top Student in School of Religion and Philosophy - Trevecca
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2019 Strickland Top Church History Student - Trevecca Church History
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Class of 2017 Valedictorian - Turner High School
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2017 Wendy's High School Heisman - Turner Cross Country and Track
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-google"></i></li>
+                        <!--<li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>-->
+                    </ul>
+                    <!--<div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>-->
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Outside of selling and developing software I enjoy watching and playing sports.  Distance running is my main focus as I competed in NCAA Cross Country and Track and have since run 3 marathons, including the 2023 Boston Marathon, with a personal best time of 2:53:02.</p>
+                    <p class="mb-0">Recently you might have seen me spending other free time playing Pickleball almost every night of the week or reading and writing poetry to process life.</p>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'resume_app/js/scripts.js' %}"></script>
+    </body>
+</html>

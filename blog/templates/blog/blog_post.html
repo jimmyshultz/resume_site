@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Jimmy Shultz - Resume</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'resume_app/assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'resume_app/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="{% url 'resume_app:index' %}">
+                <span class="d-block d-lg-none">Jimmy Shultz</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'resume_app/assets/img/headshot.jpg' %}" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'blog:blog' %}">Blog Home</a></li>
+                    {% for category in categories %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'blog:category' category.id %}">{{ category.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+             <!-- All Blog Posts-->
+             <section class="resume-section" id="single-blog-post">
+                <div class="resume-section-content">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h2 class="mb-1">{{ blogpost.title }}</h3>
+                            <span class="text-primary mb-5">{{ blogpost.date_added|date:'M d, Y H:i' }}</span>
+                            <p class="mt-5">{{ blogpost.text|linebreaks }}</p>
+                        </div>
+                    </div>
+                    <hr class="mb-5" />
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <a class="btn btn-primary mb-5" href="{% url 'blog:new_comment' blogpost.id %}">Add a comment</a>
+                            <div class="subheading"><span class="text-primary">Comments: {{ blogpost.comment_set.count }}</span></div>
+                            {% for comment in comments %}
+                                <div class="mt-5">
+                                    <p>{{ comment.text|linebreaks }}</p>
+                                    <p>by {{ comment.name }} on {{ comment.date_added|date:'M d, Y H:i' }}</p>
+                                </div>
+                            {% empty %}
+                                <div class="mt-4">
+                                    <p>No comments yet. <a href="#">Start the discussion now!</a></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'resume_app/js/scripts.js' %}"></script>
+    </body>
+</html>
