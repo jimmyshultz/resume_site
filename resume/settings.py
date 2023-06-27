@@ -20,7 +20,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', '$0uthH@g3m3nStr33t')
 IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if not IS_HEROKU_APP:
+    DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
